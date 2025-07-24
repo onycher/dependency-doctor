@@ -3,13 +3,13 @@
 ## 1. Project Foundation
 
 ### 1.1 Configuration
-- [ ] Create `.env` file and add to `.gitignore`
-- [ ] Implement config loader utility in `src/utils/config.py`
-- [ ] Add sample config values (API keys, debug flags)
+- [x] Create `.env` file and add to `.gitignore`
+- [x] Implement config loader utility in `src/utils/config.py`
+- [x] Add sample config values (API keys, debug flags)
 
 ### 1.2 Logging
-- [ ] Set up `structlog` in `src/utils/logging.py`
-- [ ] Add a basic log statement to each interface entrypoint
+- [x] Set up `structlog` in `src/utils/logging.py`
+- [x] Add a basic log statement to each interface entrypoint
 
 ---
 
@@ -64,8 +64,9 @@
 ## 5. Testing
 
 ### 5.1 Unit Tests
-- [ ] Add tests for config loader
-- [ ] Add tests for logging setup
+- [x] Add tests for config loader
+- [x] Add tests for logging setup
+- [x] Add tests for all log levels, structured data, logger naming, and exception logging
 - [ ] Add tests for each service
 
 ### 5.2 Integration Tests

@@ -1,2 +1,4 @@
 # Dependency Doctor
 .env 
+__pycache__/
+*.pyc 

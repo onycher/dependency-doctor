@@ -42,6 +42,9 @@ alwaysApply: true
 - Manage dependencies using `uv` from https://github.com/astral-sh/uv.
 - Use virtual environments to isolate dependencies.
 
+## Libraries
+- Frontend: rio (https://github.com/rio-labs/rio)
+- MCP server (https://github.com/modelcontextprotocol/python-sdk)
 ## Code Style
 - Ensure code style consistency using `Ruff`.
 - Follow PEP 8 guidelines for code formatting.

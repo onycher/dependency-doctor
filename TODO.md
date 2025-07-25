@@ -6,6 +6,7 @@
 - [x] Create `.env` file and add to `.gitignore`
 - [x] Implement config loader utility in `src/utils/config.py`
 - [x] Add sample config values (API keys, debug flags)
+- [x] Add `GITHUB_TOKEN` for authenticated requests
 
 ### 1.2 Logging
 - [x] Set up `structlog` in `src/utils/logging.py`
@@ -16,19 +17,22 @@
 ## 2. Core Interfaces (Skeletons)
 
 ### 2.1 CLI (Click)
-- [ ] Implement `doctor status` command
-- [ ] Implement `doctor deps` command (list dependencies)
+- [x] Implement `doctor status` command
+- [x] Implement `doctor deps` command (from GitHub, pyproject.toml and requirements.txt)
+- [x] Implement `doctor check-updates` command
+- [ ] Add support for listing transitive dependencies
 - [ ] Implement `doctor update` command (trigger update)
+- [ ] Implement `doctor security-scan` command
 
 ### 2.2 API (FastAPI)
-- [ ] Implement `/status` endpoint
+- [x] Implement `/status` endpoint
 - [ ] Implement `/dependencies` endpoint (list)
 - [ ] Implement `/update` endpoint (trigger update)
 - [ ] Implement `/security` endpoint (scan for vulnerabilities)
 
 ### 2.3 Web UI (rio)
-- [ ] Create rio app entrypoint
-- [ ] Implement dashboard page (calls `/status`)
+- [x] Create rio app entrypoint
+- [x] Implement dashboard page (calls `/status`)
 - [ ] Implement dependencies page (calls `/dependencies`)
 - [ ] Implement update trigger UI
 - [ ] Implement security scan UI
@@ -38,11 +42,11 @@
 ## 3. Core Services
 
 ### 3.1 DependencyService
-- [ ] Implement function to parse and list dependencies
-- [ ] Implement function to check for outdated dependencies
+- [x] Implement function to parse and list dependencies (from GitHub)
+- [x] Implement function to check for outdated dependencies (with intelligent comparison)
 
 ### 3.2 SecurityService
-- [ ] Implement function to scan dependencies for vulnerabilities
+- [x] Implement function to scan dependencies for vulnerabilities
 - [ ] Integrate with public vulnerability database (stub/mock first)
 
 ### 3.3 RiskAnalysisService
@@ -67,7 +71,10 @@
 - [x] Add tests for config loader
 - [x] Add tests for logging setup
 - [x] Add tests for all log levels, structured data, logger naming, and exception logging
-- [ ] Add tests for each service
+- [x] Add tests for GitHub scanner service (pyproject.toml and requirements.txt)
+- [x] Add tests for update checker service (with version comparison logic)
+- [x] Add tests for security scanner service
+- [ ] Add tests for each remaining service
 
 ### 5.2 Integration Tests
 - [ ] Test CLI commands end-to-end

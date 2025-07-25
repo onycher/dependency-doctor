@@ -1,0 +1,3 @@
+[app]
+main-module = "src.controllers.web_controller"
+name = "Dependency Doctor" 

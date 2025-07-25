@@ -1,13 +1,13 @@
-from src.utils.logging import get_logger
+import rio
+from ..utils.logging import get_logger
+from ..web.dashboard import Dashboard
 
 log = get_logger(__name__)
 
-# Placeholder for rio web app entrypoint
-# To be implemented with rio components
+# This file defines the Rio app. It is intended to be run with the `rio` CLI.
+app = rio.App(
+    build=Dashboard,
+    # You can add assets here later, e.g., assets_dir="path/to/assets"
+)
 
-def start_web():
-    log.info("Web UI started")
-    print("Starting Dependency Doctor rio web app (to be implemented)")
-
-if __name__ == "__main__":
-    start_web() 
+log.info("Rio app defined. Use 'uv run rio run' to launch.") 

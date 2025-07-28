@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: dependency-doctor
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.2.1
+Requires-Dist: fastapi>=0.116.1
+Requires-Dist: pip-audit>=2.9.0
+Requires-Dist: pygithub>=2.6.1
+Requires-Dist: pytest>=8.4.1
+Requires-Dist: python-dotenv>=1.1.1
+Requires-Dist: rio-ui>=0.11.1
+Requires-Dist: ruff>=0.12.5
+Requires-Dist: structlog>=25.4.0
+Requires-Dist: toml>=0.10.2

@@ -1,8 +1,13 @@
 import os
-from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+# Try to load dotenv if available, but don't fail if it's not
+try:
+    from dotenv import load_dotenv
+    # Load environment variables from .env file
+    load_dotenv()
+except ImportError:
+    # If python-dotenv is not available, just continue without it
+    pass
 
 def get_config(key: str, default=None):
     """

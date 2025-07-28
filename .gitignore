@@ -127,4 +127,10 @@ temp/
 tmp/
 logs/
 *.sqlite
-*.db 
+*.db
+
+# Docker
+.dockerignore
+
+# Development
+.pre-commit-cache/ 
